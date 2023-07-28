@@ -11,17 +11,21 @@ body {
 
 .blok {
   padding: 20px;
+  flex-basis: 100%;
 }
 
 .horni {
   background-color: #f1c40f;
 }
+
 .prvni {
   background-color: #2ecc71;
 }
+
 .druhy {
   background-color: #e74c3c;
 }
+
 .treti {
   background-color: #8e44ad;
 }
@@ -34,3 +38,28 @@ body {
 	- 640px
 	- 1000px
 */
+
+
+@media (min-width:640px) {
+  .kontejner {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .prvni,
+  .druhy {
+    flex-basis: 50%;
+  }
+}
+
+@media (min-width:1000px) {
+  .horni {
+    flex-basis: 100%;
+  }
+
+  .prvni,
+  .druhy,
+  .treti {
+    flex-basis: calc(100% / 3)
+  }
+}
